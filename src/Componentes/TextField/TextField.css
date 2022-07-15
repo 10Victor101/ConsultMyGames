@@ -1,0 +1,21 @@
+.textfield {
+    margin-bottom: 10px;
+}
+
+.textfield label {
+    margin-left: 4px;
+    display: block;
+    font-weight: bold;
+}
+
+.textfield input {
+    border: none;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #0b3474;
+    border-radius: 10px;
+}
+
+.textfield input:hover {
+    border: 1px solid orange;
+}

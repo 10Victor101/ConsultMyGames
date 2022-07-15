@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Card from './Componentes/Card';
+import Gameform from './Componentes/GameForm';
 
 function App() {
+  const [games, setGames] = useState([])
+
+  const statusArray = [
+    {
+      name: "Em andamento",
+      hex: "#7c7c7c",
+    },
+    {
+      name: "Pausado",
+      hex: "#e5b358",
+    },
+    {
+      name: "Largado",
+      hex: "#cc6363",
+    },
+    {
+      name: "Finalizado",
+      hex: "#097600",
+    },
+  ]
+
+  const addGame = (game) => {
+    setGames([...games, game])
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Gameform sendGame={(game) => addGame(game)} statusArray={statusArray} />
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {games.map((game) => <Card key={game.name} name={game.name} status={game.status} price={game.price} statusHEX={game.hex} />)}
+      </div>
     </div>
   );
 }
