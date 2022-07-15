@@ -1,1 +1,2 @@
-<h1>Explicação</h1>
+<h1>My Games Consult</h1>
+<p>Site para cadastrarmos nossos jogos para consultarmos posteriormente o status em que se encontra, seja em andamento, pausado, largado ou finalizado. Além de contar também com o valor pago de cada jogo para termos noções financeiras. O produto foi criado em Reacjs e não está fazendo conexão com o banco de dados, até o momento é apenas o front-end.</p>
